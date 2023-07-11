@@ -7,7 +7,6 @@ import ErrorMessage from "./ErrorMessage";
 import Alert from "./Alert";
 import Button from "./Button";
 import Filter from "./Filter";
-import LoadMore from "./LoadMore";
 import TextArea from "./TextArea";
 
 export {
@@ -20,6 +19,5 @@ export {
   Alert,
   Button,
   Filter,
-  LoadMore,
   TextArea,
 };

@@ -1,21 +1,26 @@
 import React from "react";
 
-const Filter = () => {
-  const category = "found";
+const Filter = (props) => {
   return (
     <>
       <div className="flex space-x-2 items-center text-sm">
         <p
+          onClick={() => props.onChange("lost")}
           className={`${
-            category !== "lost" ? "text-[#7D8186]" : "text-black font-semibold"
+            props.category !== "lost"
+              ? "text-[#7D8186]"
+              : "text-black font-semibold"
           } cursor-pointer`}
         >
           Dicari
         </p>
         <p>|</p>
         <p
+          onClick={() => props.onChange("found")}
           className={`${
-            category !== "found" ? "text-[#7D8186]" : "text-black font-semibold"
+            props.category !== "found"
+              ? "text-[#7D8186]"
+              : "text-black font-semibold"
           } cursor-pointer`}
         >
           Ditemukan
