@@ -1,9 +1,8 @@
 import React from "react";
 import Button from "./Button";
-import { useAuthContext } from "../context/AuthContext";
 
 const ProfileCard = () => {
-  const { user } = useAuthContext(); 
+  const user = JSON.parse(sessionStorage.getItem("profile"));
   return (
     <>
       <div className="w-full border-[2px] border-black px-4 py-6 sticky top-[80px] rounded-md">

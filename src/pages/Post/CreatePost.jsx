@@ -3,15 +3,14 @@ import { Button, ErrorMessage, Navbar, NoteBoard, Select, TextArea } from "../..
 import { container } from "../../utils/Style";
 import { useDispatch, useSelector } from "react-redux";
 import { createPostData } from "../../store/actions/PostAction";
-import { useAuthContext } from "../../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 import { PostType } from "../../store/types/PostType";
+import { token } from "../../utils/Authorization";
 
 const CreatePost = () => {
   const navigate = useNavigate();
   const { isCreated, createError } = useSelector((state) => state.Post);
   const dispatch = useDispatch();
-  const { token } = useAuthContext();
 
   const [form, setForm] = useState({
     category_id: 1,
