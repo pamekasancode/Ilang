@@ -22,7 +22,7 @@ const Login = () => {
   
   useEffect(() => {
     currentState.isAuthenticated && navigate("/"); 
-  }, [currentState])
+  }, [currentState.isAuthenticated])
 
 
   return (
