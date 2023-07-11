@@ -4,13 +4,15 @@ export const initPostState = {
     loading: true,
     page: 1,
     category: "found",
-    data: []
+    data: [],
+    isCreated: false,
+    createError: []
 }
 
 export const PostReducer = (state = initPostState, action) => {
     switch (action.type) {
         case PostType.BEFORE_STATE:
-            return {...state, initPostState}
+            return {...state, isCreated: false, createError: []}
         case PostType.SET_LOADING:
             return {...state, loading: true}
         case PostType.STOP_LOADING:
@@ -21,6 +23,12 @@ export const PostReducer = (state = initPostState, action) => {
             return {...state, data:[...state.data, ...action.payload.data], loading: true}
         case PostType.CHANGE_CATEGORY:
             return {...state, data: [], category: action.payload.category, page: 1, loading: true}
+        case PostType.CREATED:
+            return {...state, isCreated: true}
+        case PostType.CREATE_FAIL:
+            return {...state, isCreated: false}
+        case PostType.ERROR_CREATE:
+            return {...state, isCreated: false, createError: action.payload.createError}
         default:
             return state;
     }

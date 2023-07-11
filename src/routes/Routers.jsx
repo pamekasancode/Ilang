@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Home, Login, SignUp } from "../pages";
+import { CreatePost, Home, Login, SignUp } from "../pages";
 import Layout from "../components/Layout";
 import ProtectedRoute from "./ProtectedRoute";
 import GuardRoute from "./GuardRoute";
@@ -13,6 +13,7 @@ const Routers = () => {
           <Route path="/" element={<Layout />}>
             <Route path="/" element={<Home />} />
           </Route>
+          <Route path="/create" element={<CreatePost />} />
         </Route>
         <Route element={<GuardRoute/>}>
           <Route path="/login" element={<Login />} />

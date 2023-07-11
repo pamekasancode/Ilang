@@ -3,8 +3,10 @@ import { Button, Card, Filter } from "../../components";
 import { useDispatch, useSelector } from "react-redux";
 import { getData } from "../../store/actions/PostAction";
 import { PostType } from "../../store/types/PostType";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const navigate = useNavigate();
   const { category, page, data, loading } = useSelector((state) => state.Post);
   const dispatch = useDispatch();
 

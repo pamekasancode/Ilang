@@ -8,6 +8,7 @@ import Alert from "./Alert";
 import Button from "./Button";
 import Filter from "./Filter";
 import TextArea from "./TextArea";
+import NoteBoard from "./NoteBoard";
 
 export {
   Navbar,
@@ -20,4 +21,5 @@ export {
   Button,
   Filter,
   TextArea,
+  NoteBoard
 };
