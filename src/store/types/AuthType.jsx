@@ -1,0 +1,4 @@
+export const AuthType = {
+    AUTHENTICATED: "AUTHENTICATED",
+    LOGIN_INVALID: "LOGIN_INVALID"
+}
