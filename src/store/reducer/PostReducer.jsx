@@ -3,7 +3,7 @@ import { PostType } from "../types/PostType";
 export const initPostState = {
     loading: true,
     page: 1,
-    category: "found",
+    category: "lost",
     data: [],
     isCreated: false,
     createError: []
@@ -12,7 +12,7 @@ export const initPostState = {
 export const PostReducer = (state = initPostState, action) => {
     switch (action.type) {
         case PostType.BEFORE_STATE:
-            return {...state, isCreated: false, createError: []}
+            return {...state, isCreated: false, data: [], createError: [], loading: true, page: 1}
         case PostType.SET_LOADING:
             return {...state, loading: true}
         case PostType.STOP_LOADING:

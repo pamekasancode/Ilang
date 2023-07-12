@@ -16,7 +16,7 @@ const Card = (props) => {
             className="w-[45px] h-[45px] object-cover rounded-full border-[2px] border-black"
           />
           <div>
-            <Link to="" className="text-sm font-semibold">{props.name}</Link>
+            <Link to={`/user/${props.user}`} className="text-sm font-semibold">{props.name}</Link>
             <p className="text-xs text-[#7D8186]">{props.date}</p>
           </div>
         </div>

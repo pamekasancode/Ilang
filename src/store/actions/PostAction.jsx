@@ -2,7 +2,6 @@ import { BASE_API } from "../../utils/Constant";
 import { PostType } from "../types/PostType";
 
 export const getData = (category, page) => async (dispatch) => {
-  dispatch({ type: PostType.BEFORE_STATE });
   return await fetch(`${BASE_API}/post/${category}?page=${page}`, {
     headers: {
       "Content-Type": "application/json",

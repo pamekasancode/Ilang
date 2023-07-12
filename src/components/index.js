@@ -6,9 +6,10 @@ import Select from "./Select";
 import ErrorMessage from "./ErrorMessage";
 import Alert from "./Alert";
 import Button from "./Button";
-import Filter from "./Filter";
 import TextArea from "./TextArea";
 import NoteBoard from "./NoteBoard";
+import UserProfile from "./UserProfile";
+import Filter from "./Filter";
 
 export {
   Navbar,
@@ -19,7 +20,8 @@ export {
   ErrorMessage,
   Alert,
   Button,
-  Filter,
   TextArea,
-  NoteBoard
+  NoteBoard,
+  UserProfile,
+  Filter
 };

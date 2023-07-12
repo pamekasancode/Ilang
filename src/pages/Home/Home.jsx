@@ -11,15 +11,13 @@ const Home = () => {
   const dispatch = useDispatch();
 
   const onChangeCategory = (val) => {
-    return (
-      category !== val &&
-      dispatch({ type: PostType.CHANGE_CATEGORY, payload: { category: val } })
-    );
+    // if (val === category) return;
+    dispatch({ type: PostType.CHANGE_CATEGORY, payload: { category: val } });
   };
 
   useEffect(() => {
     loading && dispatch(getData(category, page));
-  }, [category, page]);
+  }, [category, page, loading]);
 
   return (
     <>
@@ -36,13 +34,14 @@ const Home = () => {
         {data.map((post, index) => (
           <Card
             key={index}
+            user={post.user_id}
             name={post.name}
             date={post.date}
             announcement={post.announcement}
             image={post.image}
           />
         ))}
-        { loading ? (
+        {loading ? (
           <Button
             variant="secondary"
             text="Muat Lebih Banyak"
